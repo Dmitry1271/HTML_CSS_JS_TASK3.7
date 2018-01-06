@@ -5,19 +5,31 @@
 	text-decoration: none;
 	font-size: 25px;
 }
+.header__top .menu-wrap{
+	width: 100%;
+	height: 40px;
+	background-color: #f8f8f8;
+	position: absolute;
+	display: none;
+}
 .header__bottom{
 	position: fixed;
 	height: 50px;
 	background-color: #fff;
 	width: 100%;
-	z-index: 800;
+	z-index: 25;
 	border-bottom: solid #000 1px;
 }
 .header__bottom .logo{
-	height: 50px;
+	padding-top: 5px;
+	height: 40px;
 	width: 30%;
 	margin-left: 20%;
 	float: left;
+}
+.header__bottom .search{
+	position: absolute;
+	display: none;
 }
 .header__bottom .loupe, .cart{
 	height: 20px;
@@ -55,6 +67,7 @@
 	background-color: #E6E6E6;
 	display: none;
 	position: fixed;
+	min-height: 100%;
 }
 .nav-menu__header{
 	padding: 17px;
@@ -78,6 +91,9 @@
 }
 .nav-menu__body li{
 	height: 55px;
+}
+.nav-menu__body li a{
+	text-decoration: none;
 }
 .nav-menu__body span{
 	text-decoration: none;
@@ -146,7 +162,7 @@
 	background-color: #ebebec;
 	}
 .card{
-	box-shadow: 0 1px 2px #cecece;
+	box-shadow: 0 1px 2px #585858;
 	float: left;
 	margin-top: 10px;
 	background-color: #fff;
@@ -207,6 +223,7 @@
 	background-size: 20px;
 }
 .card__info .cart-button{
+	font-family: cambria;
 	margin-top: 20px;
 	display: inline-block;
     width: 8em;
@@ -216,11 +233,11 @@
     text-align: center;
     text-decoration: none;
     user-select: none;
-    color: #000;
+    color: #fff;
     outline: none;
     border: 1px solid rgba(0,0,0,.4);
     border-radius: 2px;
-    background: linear-gradient(#2EFE2E, #088A08);
+    background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, #F02F17);
     box-shadow:
     0 0 3px rgba(0,0,0,0) inset,
     0 1px 1px 1px rgba(255,255,255,.2),
@@ -245,6 +262,142 @@
 	width: 50px;
 	height: 1px;
 	margin-top: 5px;
+}
+
+@media(min-width: 500px){
+	.card{
+		width: 42%;
+	}
+	.header__bottom{
+		height: 70px;
+	}
+	.header__bottom .logo{
+		margin-top: 5px;
+		height: 50px;
+		width: 20%;
+		margin-left: 15%;
+	}
+}
+
+@media(min-width: 1000px){
+	.card{
+		width: 26.7%;
+	}
+	.header__bottom{
+		position: relative;
+	}
+	.header__bottom #menu-button{
+		display: none;
+	}
+	.header__top .menu-wrap{
+		position: relative;
+		display: block;
+	}
+
+	.header__top .menu {
+		float: right;
+   		margin-right:10%;
+	}
+ 
+	.header__top .menu li {
+	    margin:0px;
+	    list-style:none;
+   		font-family:'Ek Mukta';
+	}
+ 
+	.header__top .menu a {
+    	transition:all linear 0.15s;
+    	color:#919191;
+	}
+ 
+	.header__top .menu li:hover > a {
+    	text-decoration:none;
+    	color:red;
+	}
+	.header__top .menu .arrow {
+    	font-size:11px;
+    	line-height:0%;
+    	color:#919191;;
+	}
+
+	.header__top .menu > ul > li {
+    	float:left;
+    	display:inline-block;
+    	position:relative;
+    	font-size:17px;
+	}
+ 
+	.header__top .menu > ul > li > a {
+  		text-decoration: none;
+    	padding:10px 30px;
+    	display:inline-block;
+	}
+	.header__top .sub-menu {
+    	width:100%;
+    	padding:5px 0px;
+    	position:absolute;
+    	top:100%;
+    	left:0px;
+    	z-index:-1;
+    	opacity:0;
+    	transition:opacity linear 0.15s;
+    	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+	}
+	.header__top .menu li:hover .sub-menu {
+		background-color: #fff;
+    	z-index:999;
+    	opacity:1;
+	}
+	.header__top .sub-menu li {
+    	display:block;
+    	font-size:16px;
+	}
+ 
+	.header__top .sub-menu li a {
+    	text-decoration: none;
+    	padding:10px 30px;
+    	display:block;
+	}
+ 
+	.header__top .sub-menu li a:hover, .sub-menu .current-item a {
+    	background:#f2f2f2;
+	}
+	.header__bottom{
+		height: 90px;
+	}
+	.header__bottom .logo{
+		margin-top: 10px;
+		height: 70px;
+		width: 22%;
+		margin-left: 7%;
+	}
+	.header__bottom .loupe, .cart{
+		position: absolute;
+		display: none;
+	}
+	.header__bottom .search{
+		position: relative;
+		display: block;
+	}
+	.header__bottom .search input{
+		font-size: 14px;
+		height: 30px;
+		margin-top: 25px;
+		margin-left: 30px;
+		width: 35%;
+		border: solid #929292 1px;
+		border-radius: 2px 0px 0px 2px;
+	}
+	.header__bottom .search input:focus{
+		outline: none;
+	}
+	.header__bottom .search-button{
+		height: 34px;
+    	position: absolute;
+    	margin-top: 25px;
+    	margin-left: -2px;
+	}
+
 }
 
 
