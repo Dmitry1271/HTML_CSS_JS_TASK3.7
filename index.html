@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+	<title>техно-быт</title>
+</head>
+<body>
+<header> 
+	<div class="header">
+		<div class="header__top">
+			<div id="nav-menu">
+				<div class="nav-menu__header">
+					<a href="#signin">sign in</a>
+					<span>/</span>
+					<a href="#siginup">sign up</a>
+					<span class="cross"><a href="">&#9747;</a></span>
+				</div>
+				<div class="nav-menu__body">
+					<ul>
+						<li><a href=""><img src="img/home-icon.png"><span>Home</span></a></li>
+						<li><a href="#"><img src="img/order-icon.png"><span>My orders</span></a></li>
+						<li><a href="#"><img src="img/cart.png"><span>Cart</span></a></li>
+						<li><a href="#"><img src="img/planet-icon.png"><span>Language</span></a></li>
+						<li><a href="#"><img src="img/question-icon.png"><span>Help</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<button id="menu-button" onclick="displayNavMenu('nav-menu')">
+				<div class="menu-button__container">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>		
+				</div>
+			</button>
+			<a href="#"><img class="logo" src="img/logo.png"></a>
+			<a href="#"><img class="cart" src="img/cart.png"></a>
+			<a href="#"><img class="loupe" src="img/loupe.png"></a>
+		</div>	
+	</div>
+</header>
+<div class="wrapper">
+	<div class="wrapper__left">
+
+	</div>
+	<div class="wrapper__center">
+		<img class="main-img" src="img/main-img.jpg">
+		<button id="catalog-button">Catalog</button>
+		<button id="dicount-goods-button">Discounted goods</button>
+		<h5><b>POPULAR GOODS</b></h5>
+		<div class="cards">
+			<div class="card">
+				<div class="card__img">
+					<a href="#"><img src="img/goods/televisor/tel1.png"></a>
+				</div>
+				<div class="card__info">
+					<a href=""><h3>Televisor Sumsung</h3></a>
+					<div class="rating">
+						<div class="star star1"></div>
+						<div class="star star2"></div>
+						<div class="star star3"></div>
+						<div class="star star4"></div>
+						<div class="star star5"></div>
+					</div>
+					<span>2000</span>	
+					<button class="cart-button"><b>Add to cart</b></button>
+				</div>
+			</div>
+			<div class="card"></div>
+			<div class="card"></div>
+			<div class="card"></div>
+		</div>
+	</div>
+</div>
+<footer>
+	
+</footer>
+<script type="text/javascript" src="script/index.js"></script>
+</body>
+</html>
