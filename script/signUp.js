@@ -25,7 +25,7 @@ function loginVerify(){
 	}
 }
 function emailVerify(){
-	if(!isEmpty(email)){
+	if(!isEmpty(email) && isValidEmail(email)){
 		return hideError(email, emailError)
 	}
 }
@@ -69,6 +69,9 @@ function passwordsMatch(pas1, pas2){
 function isValidLogin(login){
 	return login.value.match('^[a-zA-Z][a-zA-Z@\-_0-9]{5,20}$');
 }
+function isValidEmail(email){
+	return	email.value.match('^[a-zA-Z0-9_].+@.+\..+');
+}
 function isValidPhoneNumber(phoneNumber){
 	return phoneNumber.value.match('^[0-9]{5,15}$');
 }
@@ -90,6 +93,9 @@ function vlidateRegisterData(){
 	if(isEmpty(email)){
 		return showError(email, emailError, 'Email is required');
 	}
+	if(!isValidEmail(email)){
+		return showError(email, emailError, 'Email is invalid');
+	}
 	if(isEmpty(password)){
 		return showError(password, passwordError, 'Password is required');
 	}
@@ -108,7 +114,6 @@ function vlidateRegisterData(){
 	if(!isValidPhoneNumber(phoneNumber)){
 		return showError(phoneNumber, phoneNumberError, 'Invalid phone number');
 	}
-
 	if(isEmpty(address)){
 		return showError(address, addressError, 'Address is required');
 	}

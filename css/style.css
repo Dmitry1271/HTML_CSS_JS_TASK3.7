@@ -614,17 +614,12 @@ footer .content li a{
 	.main-form .container input{
 		background-color: #fff;
 		border: 1px solid #a2a2a2;
-		width: 70%;
+		width: 90%;
+		margin-left: 5%;
 	}
 	.main-form #register-submit-button{
 		width: 50%;
-		margin-left: 13%;
-	}
-	.main-form .container p{
-		margin-left: -18%;
-	}
-	.main-form .container h2{
-		margin-left: -18%;
+		margin-left: 25%;
 	}
 
 }
