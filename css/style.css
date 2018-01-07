@@ -298,6 +298,7 @@ footer .content li a{
 }
 /*signUp.html*/
 .main-form{
+	width: 100%;
 	margin-top: 50px;
 	float: left;
 	background-color: #ebebec;
@@ -313,9 +314,11 @@ footer .content li a{
 	text-align: center;
 }
 .main-form .container form{
-	padding-bottom: 30px;
 	width: 80%;
-	margin-left: 10%; 
+	margin-left: 10%;
+}
+.main-form .container .input-block{
+	width: 100%;
 }
 .main-form .container input{
 	width: 100%;
@@ -334,7 +337,7 @@ footer .content li a{
 }
 .main-form #register-submit-button{
 	margin-bottom: 10px;
-	margin-top: 5px;
+	margin-top: 30px;
 	margin-left: 5%;
   	position: relative;
     display: inline-block;
@@ -358,14 +361,18 @@ footer .content li a{
 	color: #000;
 	text-align: center;
 }
-
 .main-form span{
 	color: #000;
 }
 .main-form a{
 	color: #000;
 }
-
+.error{
+	color: red;
+	font-size: 12px;
+	font-family: Times;
+	padding-top: 5px;
+}
 
 @media(min-width: 500px){
 	.card{
@@ -386,7 +393,7 @@ footer .content li a{
 	}
 }
 
-@media(min-width: 1025px){
+@media(min-width: 1100px){
 	.cards{
 		width: 87%;
 		margin-left: 6.5%;
@@ -602,7 +609,7 @@ footer .content li a{
     	margin-top: 20px;
     	background-color: #fff;
     	border: 3px solid #b2b2b2;
-    	width: 50%;
+    	width: 60%;
     }
 	.main-form .container input{
 		background-color: #fff;
@@ -611,10 +618,13 @@ footer .content li a{
 	}
 	.main-form #register-submit-button{
 		width: 50%;
-		margin-left: 15%;
+		margin-left: 13%;
 	}
 	.main-form .container p{
-		margin-left: -20%;
+		margin-left: -18%;
+	}
+	.main-form .container h2{
+		margin-left: -18%;
 	}
 
 }

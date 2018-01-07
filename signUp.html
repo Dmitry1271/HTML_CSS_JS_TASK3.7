@@ -19,15 +19,33 @@
 		<div class="main-form">
 			<div class="container">
 				<h2>Registration</h2>
-				<form>
-					<input type="text" name="login" placeholder="Login">
-					<input type="email" name="email" placeholder="Email">
-					<input type="password" name="password" placeholder="Password">
-					<input type="password" name="password-comfirmation" placeholder="Reenter Password">
-					<input type="text" name="phone-number" placeholder="Phone Number">
-					<input type="text" name="address" placeholder="Address">
+				<form name="register_form" onsubmit="return vlidateRegisterData()">
+					<div class="input-block">
+						<input id="login" type="text" name="login" placeholder="Login">
+						<div id="login_error" class="error"></div>
+					</div>
+					<div class="input-block">
+						<input id="email" type="email" name="email" placeholder="Email">
+						<div id="email_error" class="error"></div>
+					</div>
+					<div class="input-block">
+						<input id="password" type="password" name="password" placeholder="Password">
+						<div id="password_error" class="error"></div>
+					</div>
+					<div class="input-block">
+						<input id="password_conf" type="password" name="password_comfirmation" placeholder="Reenter Password">
+						<div id="password_conf_error" class="error"></div>
+					</div>
+					<div class="input-block">
+						<input id="phone_number" type="text" name="phone_number" placeholder="Phone Number">
+						<div id="phone_number_error" class="error"></div>
+					</div>
+					<div class="input-block">
+						<input id="address" type="text" name="address" placeholder="Address">
+						<div id="address_error" class="error"></div>
+					</div>
+					<button type="submut" id="register-submit-button">Agree and create account</button>
 				</form>
-				<button id="register-submit-button">Agree and create account</button>
 				<p><span>Already have an account? </span><a href="#">Sign in</a></p>
 			</div>	
 		</div>
@@ -42,5 +60,6 @@
 		</div>
 	</div>
 </footer>
+<script type="text/javascript" src="script/signUp.js"></script>
 </body>
 </html>
